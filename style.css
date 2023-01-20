@@ -1,0 +1,11 @@
+body{
+    background: lavender;
+    font-family: monospace;
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    section#reviews {
+      display: none;
+    }
+}

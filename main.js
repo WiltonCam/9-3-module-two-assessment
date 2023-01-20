@@ -1,9 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+    getAllFilmes();
+})
 
+const getAllFilmes = () => {
+    const url = "https://resource-ghibli-api.onrender.com/"
+    fetch(url)
+        .then((response) => {
+            response.json()
+        })
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((err) => {
+            handleError(err);
+        });
+}
 
+const populateSelect = () => {}
 
-
-
-
+const handleError = (error) => {
+    let errorNotification = document.createElement(error)
+    errorNotification.innerText= ""
+}
 // To ensure Cypress tests work as expeded, add any code/functions that you would like to run on page load inside this function
 
 function run() {
